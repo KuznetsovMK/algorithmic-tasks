@@ -43,12 +43,10 @@ public class LetterCombinationsPhoneNumberV2 {
     private List<String> concat(List<String> strings, String string) {
         List<String> result = new ArrayList<>();
 
-        for (int i = 0; i < strings.size(); i++) {
+        for (String value : strings) {
             for (int j = 0; j < string.length(); j++) {
-                String s = strings.get(i);
                 char c = string.charAt(j);
-
-                result.add(s + c);
+                result.add(value + c);
             }
         }
 
